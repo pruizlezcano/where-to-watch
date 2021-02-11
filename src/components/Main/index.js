@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import CountryList from '../../others/countryList';
-import { Form, Label, Input, Button } from './styles';
+import { Form, Label, Input, Button, Results } from './styles';
 import Item from '../Item/index';
 
-const SearchInput = () => {
+const Main = () => {
   const [query, setQuery] = useState('');
   const [language, setLanguage] = useState('');
   const [list, setList] = useState([]);
@@ -26,9 +26,6 @@ const SearchInput = () => {
 
   return (
     <div>
-      <div className="logoSection">
-        <img id="logo" src="logo-light.png" alt="WhereToWatch" />
-      </div>
       <Form onSubmit={handleSubmit}>
         <Label htmlFor="query" hidden>
           Movie/Serie
@@ -51,13 +48,13 @@ const SearchInput = () => {
         />
         <Button type="submit">Search</Button>
       </Form>
-      <div className="results">
+      <Results>
         {list.map((item) => (
           <Item key={item.id} {...item}></Item>
         ))}
-      </div>
+      </Results>
     </div>
   );
 };
 
-export default SearchInput;
+export default Main;

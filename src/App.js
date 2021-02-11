@@ -1,12 +1,16 @@
 import React from 'react';
-import Input from './components/Main/index';
+import Main from './components/Main/index';
 import NavBar from './components/NavBar/index';
+import Logo from './components/Logo/index';
+import useDarkMode from 'use-dark-mode';
 
 function App() {
+  const darkMode = useDarkMode(false);
   return (
     <div className="App">
-      <NavBar />
-      <Input />
+      <NavBar darkMode={darkMode} />
+      <Logo darkMode={darkMode} />
+      <Main />
     </div>
   );
 }

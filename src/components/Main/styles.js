@@ -35,3 +35,8 @@ export const Button = styled.button`
     width: 10%;
   }
 `;
+
+export const Results = styled.div`
+  width: 100%;
+  margin-top: 2em;
+`;

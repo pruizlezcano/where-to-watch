@@ -1,11 +1,8 @@
 import React from 'react';
-import useDarkMode from 'use-dark-mode';
 import Switch from 'rc-switch';
 import { Div } from './styles';
 
-const NavBar = () => {
-  const darkMode = useDarkMode(false);
-
+const NavBar = ({ darkMode }) => {
   return (
     <Div>
       <Switch onChange={darkMode.toggle} />

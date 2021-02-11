@@ -1,5 +1,6 @@
 import React from 'react';
 import providers from '../../others/providersList';
+import { ItemCard, Poster, Info, Offers, Year, Provider } from './styles';
 
 const Item = ({ poster, title, original_release_year, offers }) => {
   let haveData = false;
@@ -28,8 +29,8 @@ const Item = ({ poster, title, original_release_year, offers }) => {
   const offersList = getProviders();
   if (haveData) {
     return (
-      <div className="item">
-        <img
+      <ItemCard className="item">
+        <Poster
           src={`https://images.justwatch.com${poster.replace(
             '{profile}',
             's592'
@@ -37,21 +38,28 @@ const Item = ({ poster, title, original_release_year, offers }) => {
           alt={title}
           className="poster"
         />
-        <div className="info">
+        <Info className="info">
           <h2>
             {title}
-            <span className="year"> ({original_release_year})</span>
+            <Year className="year"> ({original_release_year})</Year>
           </h2>
-          <div className="offers">
+          <Offers className="offers">
             {Object.keys(offersList).map((e) => (
-              <div className="provider">
-                <img src={offersList[e]} alt={e} width="50px" />
-                <p style={{ 'word-break': 'inherit' }}>{e}</p>
-              </div>
+              <Provider className="provider">
+                <img
+                  style={{ 'border-radius': '10px' }}
+                  src={offersList[e]}
+                  alt={e}
+                  width="45px"
+                />
+                <p style={{ 'word-break': 'inherit', 'font-size': '0.8em' }}>
+                  {e}
+                </p>
+              </Provider>
             ))}
-          </div>
-        </div>
-      </div>
+          </Offers>
+        </Info>
+      </ItemCard>
     );
   }
   return '';
