@@ -1,0 +1,384 @@
+// Light mode
+$background-light: #FCFAF7;
+$text-light: #292624;
+$accent-light: #17AAFF;
+$container-light: #F1F1F1;
+
+//Dark mode
+$background-dark: #1D1B1A;
+$text-dark: #F9F6F0;
+$accent-dark: #0081CC;
+$container-dark: #2B2827;
+
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logoSection {
+  width: 100%;
+  text-align: center;
+}
+
+#logo {
+  width: 40%;
+  @media screen and (max-width: 1000px) {
+    width: 50%;
+  }
+}
+
+.countrySelector {
+  width: 10%;
+  display: inline-block;
+  margin: 0.7%;
+  @media screen and (max-width: 1200px) {
+    width: 15%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 20%;
+  }
+}
+
+.country {
+  text-align: left;
+}
+
+.countryName {
+  display: inline-block;
+  padding: 0 1em;
+  margin: 0 0;
+}
+
+.results {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.poster {
+  margin: 2em 2em;
+  width: 7em; 
+  float: left;
+  border-radius: 10px;
+}
+
+//TODO salto de linea si no cabe en el div
+.info {
+  position: absolute;
+  margin:2.5em 11em;
+  float: right;
+  width: 27em;
+}
+
+.year {
+  font-size: 0.6em;
+  font-variant: normal;
+}
+
+.item {
+  width: 40em;
+  height: 15em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.offers {
+  text-align: center;
+  float: left;
+  display: inline-flex;
+  margin-top:2em;
+}
+
+.provider {
+  width:6em;
+  text-align: center;
+}
+
+body.light-mode {
+  background-color: $background-light;
+  transition: 0.3s ease;
+  
+  p {
+    color: $text-light
+  }
+
+  input {
+    background: $container-light;
+    color: $text-light;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    background: $accent-light;
+    color: $text-light;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  } 
+
+  .rc-switch {
+    border: 1px solid $container-dark;
+    background-color: $container-dark;
+  }
+
+  .rc-switch:after {
+    background-color: $container-light;
+  }
+
+  .countrySelector {
+    color: $text-light;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .countrySelector__control {
+    background: $container-light;
+    border: 0;
+    border-radius: 9px;
+    height: 2.4em;
+    font-size: 1em;
+  }
+
+  .countrySelector__control {
+    background: $container-light;
+    border: 0;
+    border-radius: 9px;
+    height: 2.4em;
+    font-size: 1em;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .countrySelector {
+    * {
+      color: $text-light;
+    }
+  }
+
+  .countrySelector__menu {
+    background: $container-light;
+  }
+
+  .countrySelector__option--is-focused {
+    border: 0;
+    border-radius: 9px;
+    background-color: #D3D3D3;
+  }
+
+  .countrySelector__option--is-selected {
+    border: 0;
+    border-radius: 9px;
+    background-color: $accent-light;
+  }
+
+  .info {
+    color: $text-light;
+  }
+
+
+  .item {
+    background-color: $container-light;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+body.dark-mode {
+  background-color: $background-dark;
+  transition: 0.3s ease;
+
+  p {
+    color: $text-dark
+  }
+
+  input {
+    background: $container-dark;
+    color: $text-dark;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    background: $accent-dark;
+    color: $text-dark;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .rc-switch {
+    border: 1px solid $container-light;
+    background-color: $container-light;
+  }
+
+  .rc-switch:after {
+    background-color: $container-dark;
+  }
+
+  .countrySelector__control {
+    background: $container-dark;
+    border: 0;
+    border-radius: 9px;
+    height: 2.4em;
+    font-size: 1em;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .countrySelector {
+    *{
+      color: $text-dark;
+    }
+  }
+
+  .countrySelector__menu {
+    background: $container-dark;
+  }
+
+  .countrySelector__option--is-focused {
+    border: 0;
+    border-radius: 9px;
+    background-color: #787878;
+  }
+
+  .countrySelector__option--is-selected {
+    border: 0;
+    border-radius: 9px;
+    background-color: $accent-dark;
+  }
+
+  .info {
+    color: $text-dark;
+  }
+
+  .item {
+    background-color: $container-dark;
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+//Switch
+
+.rc-switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 44px;
+  height: 22px;
+  line-height: 20px;
+  padding: 0;
+  margin-right:1em;
+  vertical-align: middle;
+  border-radius: 20px 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.rc-switch-inner {
+  color: $container-light;
+  font-size: 12px;
+  position: absolute;
+  left: 24px;
+  top: 0;
+}
+
+.rc-switch:after {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 2px;
+  top: 1px;
+  border-radius: 50% 50%;
+  content: " ";
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  transform: scale(1);
+  transition: left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+  animation-duration: 0.3s;
+  animation-name: rcSwitchOff;
+}
+
+.rc-switch:hover:after {
+  transform: scale(1.1);
+  animation-name: rcSwitchOn;
+}
+
+.rc-switch:focus {
+  outline: none;
+}
+
+.rc-switch-checked {
+  border: 1px solid #87d068;
+  background-color: #87d068;
+}
+
+.rc-switch-checked .rc-switch-inner {
+  left: 6px;
+}
+
+.rc-switch-checked:after {
+  left: 22px;
+}
+
+.rc-switch-disabled {
+  cursor: no-drop;
+  background: #ccc;
+  border-color: #ccc;
+}
+
+.rc-switch-disabled:after {
+  background: #9e9e9e;
+  animation-name: none;
+  cursor: no-drop;
+}
+
+.rc-switch-disabled:hover:after {
+  transform: scale(1);
+  animation-name: none;
+}
+
+.rc-switch-label {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 14px;
+  padding-left: 10px;
+  vertical-align: middle;
+  white-space: normal;
+  pointer-events: none;
+  user-select: text;
+}
+
+@keyframes rcSwitchOn {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rcSwitchOff {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
