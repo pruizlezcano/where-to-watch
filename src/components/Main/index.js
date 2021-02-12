@@ -13,9 +13,9 @@ const Main = () => {
     e.preventDefault();
     if (query && language) {
       fetch(
-        `https://apis.justwatch.com/content/titles/${language}/popular?body={"page_size":15,"page":1,"query":"${query
+        `https://wtwapi.cyclops.ga/content/${language}/${query
           .split(' ')
-          .join('+')}"}`
+          .join('+')}`
       )
         .then((res) => res.json())
         .then((json) => {
