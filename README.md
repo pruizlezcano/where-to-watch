@@ -2,18 +2,14 @@
 
 A web app to find if a movie or show is available in some stream provider in your country.
 
-<br />
-<figure class="image">
-  <img src="./readme/light-mode.png" alt="Light mode">
-  <figcaption>Light mode</figcaption>
-</figure>
-<figure class="image">
-  <img src="./readme/dark-mode.png" alt="Light mode">
-  <figcaption>Dark mode</figcaption>
-</figure>
 <br/>
 
-<hr/>
+![Light mode](./readme/light-mode.png)
+_Light mode_
+![Dark mode](./readme/dark-mode.png)
+_Dark mode_
+<br/>
+<br/>
 
 ## Requirements
 

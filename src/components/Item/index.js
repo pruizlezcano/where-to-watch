@@ -2,7 +2,7 @@ import React from 'react';
 import providers from '../../others/providersList';
 import { ItemCard, Poster, Info, Offers, Year, Provider } from './styles';
 
-const Item = ({ poster, title, original_release_year, offers }) => {
+const Item = ({ poster, title, original_release_year, offers, id }) => {
   let haveData = false;
   const getProviders = () => {
     const prov = {};
@@ -47,14 +47,12 @@ const Item = ({ poster, title, original_release_year, offers }) => {
             {Object.keys(offersList).map((e) => (
               <Provider className="provider">
                 <img
-                  style={{ 'border-radius': '10px' }}
+                  style={{ borderRadius: '10px' }}
                   src={offersList[e]}
                   alt={e}
-                  width="45px"
+                  className="providerImage"
                 />
-                <p style={{ 'word-break': 'inherit', 'font-size': '0.8em' }}>
-                  {e}
-                </p>
+                <p className="providerName">{e}</p>
               </Provider>
             ))}
           </Offers>

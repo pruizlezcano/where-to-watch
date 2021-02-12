@@ -53,6 +53,21 @@ code {
   margin: 0 0;
 }
 
+.providerImage {
+  width: 45px;
+  @media screen and (max-width: 1000px) {
+    width: 35px;
+  }
+}
+
+.providerName {
+  overflow-wrap: break-word;
+  font-size: 0.8em;
+  @media screen and (max-width: 1000px) {
+    font-size: 0.65em;
+  }
+}
+
 body.light-mode {
   background-color: $background-light;
   transition: 0.3s ease;

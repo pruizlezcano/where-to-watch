@@ -25,14 +25,14 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   border: 0;
-  width: 6%;
+  width: 4em;
   height: 2.5em;
   text-align: center;
   vertical-align: middle;
   border-radius: 9px;
   font-size: 1em;
   @media screen and (max-width: 1000px) {
-    width: 10%;
+    width: 4em;
   }
 `;
 
